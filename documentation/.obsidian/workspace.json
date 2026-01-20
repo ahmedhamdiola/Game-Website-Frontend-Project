@@ -1,0 +1,251 @@
+{
+  "main": {
+    "id": "f9fad14292a2f9c4",
+    "type": "split",
+    "children": [
+      {
+        "id": "61944f65f924cf6b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c3f6adc264801058",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Web Development/REACT/Documentation of Game Website.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Documentation of Game Website"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fa7387d7f46b2eb6",
+    "type": "split",
+    "children": [
+      {
+        "id": "632112da182699da",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2c7ac49fc6c78273",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "c115f0ea9eec53f6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "a06c6c6df2cc9a0a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      },
+      {
+        "id": "d07c013a4f8aad16",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "df96a646229176b5",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ce821ea98adf1722",
+    "type": "split",
+    "children": [
+      {
+        "id": "b7a2bc0531e62dd1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "38c317ac9c9bf766",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Quran/7efz.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 7efz"
+            }
+          },
+          {
+            "id": "67bd39fd346efecf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Quran/7efz.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 7efz"
+            }
+          },
+          {
+            "id": "ddb20a1a439a7103",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "554506c7fd1ad1e6",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "56d3d30a877c359b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Quran/7efz.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 7efz"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "c3f6adc264801058",
+  "lastOpenFiles": [
+    "Pasted image 20260120175445.png",
+    "Pasted image 20260120175430.png",
+    "Pasted image 20260120173746.png",
+    "Web Development/REACT/Pasted image 20260120171651.png",
+    "Web Development/REACT/Pasted image 20260120171131.png",
+    "Web Development/REACT/Pasted image 20260120164420.png",
+    "Web Development/REACT/Pasted image 20260120164321.png",
+    "Business AI/First Steps.md",
+    "Web Development/REACT/Documentation of Game Website.md",
+    "Pasted image 20260111120431.png",
+    "Pasted image 20260109101103.png",
+    "Studying/SAAD/Lectures/Lectures Notes/Lecture 2.md",
+    "Studying/SAAD/Lectures/Lectures Notes/Lecture 1.md",
+    "Studying/SAAD/Lectures/Lectures Notes/Lecture 7.md",
+    "Studying/SAAD/Lectures/Questions GPT/LEC1 QA GPT.md",
+    "Studying/SAAD/Lectures/Questions GPT/LEC4 QA GPT.md",
+    "Studying/SAAD/Lectures/Questions GPT/LEC3 QA GPT.md",
+    "Studying/SAAD/Lectures/Questions GPT/LEC2 QA GPT.md",
+    "Pasted image 20260109104459.png",
+    "Pasted image 20260109104447.png",
+    "Studying/SAAD/Lectures/Questions GPT/Lec6 QA GPT.md",
+    "Studying/SAAD/Lectures/Lectures Notes",
+    "Studying/SAAD/Lectures/Questions GPT/LEC5 QA GPT.md",
+    "Studying/Network/Mastering Network/Lectures Notes.md",
+    "Studying/Network/Mastering Network",
+    "Studying/OS/Sheets/Mastering OS.md",
+    "Studying/OS/Lectures/Lecture 2/7-State Process Model.md",
+    "Studying/STAT/LECTURE 2.md",
+    "Studying/OS/Sheets",
+    "Studying/OS/Lectures/Lecture 3/Address Space.md",
+    "Studying/OS/Lectures/Lecture 3",
+    "Studying/OS/Lectures/Lecture 2",
+    "Studying/OS/Lectures/Lecture 2/Lecture 2.md",
+    "Studying/OS/Lectures/Lecture 1.md",
+    "Studying/OS/Lectures/LEC1 QA.md",
+    "Studying/OS/Lectures/Lecture 2/LEC2 QA.md",
+    "Quran/Memorizing the Qur’an.md",
+    "Saved VI Links/Saved Links.md",
+    "Untitled.md",
+    "Exams/SAAD Practical.md",
+    "Exams",
+    "WELCOME TO MY WORLD.md",
+    "Studying/Network/Labs",
+    "Studying/Network",
+    "Studying/SAAD/Labs",
+    "Studying/SAAD/Lectures"
+  ]
+}

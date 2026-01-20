@@ -1,0 +1,7 @@
+{
+  "dynamicEffect": 2,
+  "digitalRainBrightness": 0.7,
+  "enableDynamicEffect": true,
+  "backgroundImageFile": ".bg/bg5.jpg",
+  "blur": 4
+}

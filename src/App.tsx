@@ -18,7 +18,7 @@ function App() {
         ASIDE</GridItem>
       <GridItem area = "main">
         <GameGrid />
-        MAIN</GridItem>
+        </GridItem>
   </Grid>
   )
 }

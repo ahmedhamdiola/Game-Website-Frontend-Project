@@ -25,7 +25,7 @@ and this is how it looks for mobile screen
 
 ---
 
-# Chapter 2: Navigation bar
+# Chapter 2: Navigation Bar
 ## first: put the logo
 i first imported logo (white and black versions for the dark and light modes) 
 ```tsx
@@ -142,3 +142,58 @@ so the final result is as follows
 ![[Pasted image 20260120173746.png]]
 
 ---
+
+
+# Chapter 4: Making Hook
+so now in the chapter 3 we did the fetch process but inside the `GameGrid` component which is not the best practice .. so to increase the modularity and make code cleaner, we may make a hook called `useGame` and it should contain as follows
+```tsx
+import { useEffect, useState } from "react"
+import apiClient from "../api-client"
+
+interface Game{
+    id: number,
+    name: string
+}
+
+interface FetchGame{
+    count: number,
+    results: Game[]
+}
+
+const useGame = ()=>{
+    const [error, setError] = useState('')
+    const [games, setGames] = useState<Game[]>([])
+    
+    useEffect(()=>
+    {
+        apiClient.get<FetchGame>('/games') // the endpoint
+        .then(res => setGames(res.data.results))
+        .catch(err => setError(err.message))
+    }, [])
+
+    return {games, error}
+}
+
+export default useGame
+```
+so this is literally the code we had in chapter 3 but everything related with fetching the data is copied here .. so our `GameGrid` component became more modular and making only one task which is rendering games as follows
+```tsx
+import { Text } from '@chakra-ui/react'
+import useGame from "@/hooks/useGame"
+
+const GameGrid = () => {
+  const {games, error} = useGame()
+  return (
+      <>
+      {error && <Text>{error}</Text>}
+        <ul>
+            {games.map(game => <li key={game.id}>{game.name}</li>)}
+        </ul>
+      </>
+  )
+}
+
+export default GameGrid
+```
+---
+
