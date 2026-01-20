@@ -14,8 +14,8 @@ const NavBar = () => {
     <HStack>
       <Image src={logo} boxSize="60px" />
       <Text>NavBar</Text> 
-      <Demo/> // the toggle mode button
-    </HStack> 
+      <Demo/> 
+    </HStack>
   )
 }
 
