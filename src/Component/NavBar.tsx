@@ -11,7 +11,7 @@ const NavBar = () => {
   const logo = colorMode === 'dark' ? logoWhite : logoBlack
 
   return (
-    <HStack>
+    <HStack justifyContent={'space-between'}>
       <Image src={logo} boxSize="60px" />
       <Text>NavBar</Text> 
       <Demo/> 
