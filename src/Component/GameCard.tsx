@@ -1,5 +1,6 @@
 import type { Game } from "@/hooks/useGame";
-import { Button, CardBody, CardDescription, CardFooter, CardRoot, CardTitle, Heading, Image } from "@chakra-ui/react";
+import { Badge, Button, CardBody, CardDescription, CardFooter, CardRoot, CardTitle, HStack, Image } from "@chakra-ui/react";
+import GameBadge from "./GameBadge";
 
 // first we gonna make interface to specify what should be included in card
 // we need game .. so we will just add the game type here .. but previously we
@@ -16,7 +17,10 @@ const GameCard = (props: Props) => {
         <CardBody>
             <CardTitle>{props.game.name}</CardTitle>
             <CardDescription>
-                {"Rating: " + props.game.rating}
+                <HStack justifyContent={'space-between'}>
+                    {"Rating: " + props.game.rating}
+                    <GameBadge score = {props.game.metacritic}></GameBadge>
+                </HStack>
             </CardDescription>
         </CardBody>
         <CardFooter gap={3}>

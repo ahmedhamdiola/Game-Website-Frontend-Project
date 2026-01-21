@@ -6,7 +6,8 @@ export interface Game{
     id: number,
     name: string,
     background_image: string,
-    rating: string
+    rating: string,
+    metacritic: number
 }
 interface FetchGame{
     count: number,
