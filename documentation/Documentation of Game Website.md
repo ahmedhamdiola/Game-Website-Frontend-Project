@@ -266,3 +266,79 @@ const GameGrid = () => {
 
 and finally this the final result for the mobile and the laptop views
 ![[Pasted image 20260121121706.png]]![[Pasted image 20260121121728.png]]
+
+---
+# Chapter 6: Loading Cards Skeletons
+now when the site is loading and the data being fetched its ugly if the screen is just blank .. so showing these skeletons will be good .. its also in Chakra Ui ready to do .. so i made `GameLoadingSkeleton` component and here is the code 
+```tsx
+import { CardRoot, Skeleton, SkeletonText } from '@chakra-ui/react'
+
+const GameLoadingSkeleton = () => {
+    return (
+        <CardRoot width={"250px"} borderRadius={20} overflow={'hidden'}>
+            <Skeleton height="200px" />
+            <SkeletonText />
+        </CardRoot>
+    )
+}
+
+export default GameLoadingSkeleton
+```
+and to render it we want first to make the loading state in the hook we made so the `useGame` code would be 
+```tsx
+    const [loading, setLoading] = useState(true)
+    useEffect(()=>
+    {
+        apiClient.get<FetchGame>('/games')
+        .then(res =>
+            {setGames(res.data.results)
+            setLoading(false)
+        })
+        .catch(err =>
+            {setError(err.message)
+            setLoading(false)
+        })
+    }, [])
+    return {games, error, loading}
+```
+and finally the render step we gonna make array of size of the skeletons we need to show till its done so the code would be
+```tsx
+import { SimpleGrid, Text } from '@chakra-ui/react'
+import useGame from "@/hooks/useGame"
+import GameCard from './GameCard'
+import GameLoadingSkeleton from './GameLoadingSkeleton'
+
+const GameGrid = () => {
+  const {games, error, loading} = useGame()
+  const NUMBER_OF_SKELETONS = 10
+  return (
+      <>
+      {error && <Text>{error}</Text>}
+        <SimpleGrid columns={{sm: 1, md: 2, lg: 3, xl: 5}} padding={10} columnGap="5" rowGap="6">
+          {///////////// Added part in this chapter
+          loading &&
+          
+          Array.from({ length: NUMBER_OF_SKELETONS }).map((_, index) => (
+          <GameLoadingSkeleton key={index} />
+          ))
+          //////////////////////////////////////////
+          //Note: this Array.from thing i give it the length and it should create
+          //array of 10 undefined values .. so that (_,index) thing means i will 
+          //map on the array created but i dont care about the value i only care 
+          //about the index of it
+          }
+            {games.map(game =>
+            <GameCard key={game.id} game = {game} />
+            )}
+        </SimpleGrid>
+      </>
+  )
+}
+
+export default GameGrid
+```
+and the results finally are like this
+![[Pasted image 20260121183027.png]]
+
+---
+# Chapter 7: 
