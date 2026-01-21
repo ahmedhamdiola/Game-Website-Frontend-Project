@@ -17,15 +17,22 @@ interface FetchGame{
 const useGame = ()=>{
     const [error, setError] = useState('')
     const [games, setGames] = useState<Game[]>([])
+    const [loading, setLoading] = useState(true)
 
 
     useEffect(()=>
     {
         apiClient.get<FetchGame>('/games') // the endpoint
-        .then(res => setGames(res.data.results))
-        .catch(err => setError(err.message))
+        .then(res => 
+            {setGames(res.data.results)
+            setLoading(false)
+        })
+        .catch(err => 
+            {setError(err.message)
+            setLoading(false)
+        })
     }, [])
 
-    return {games, error}
+    return {games, error, loading}
 }
 export default useGame

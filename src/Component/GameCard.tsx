@@ -1,5 +1,5 @@
 import type { Game } from "@/hooks/useGame";
-import { Badge, Button, CardBody, CardDescription, CardFooter, CardRoot, CardTitle, HStack, Image } from "@chakra-ui/react";
+import { Button, CardBody, CardDescription, CardFooter, CardRoot, CardTitle, HStack, Image } from "@chakra-ui/react";
 import GameBadge from "./GameBadge";
 
 // first we gonna make interface to specify what should be included in card
@@ -11,7 +11,7 @@ interface Props{
 }
 const GameCard = (props: Props) => {
     return (
-    <CardRoot borderRadius={20} overflow={'hidden'}>
+    <CardRoot width={"250px"} borderRadius={20} overflow={'hidden'}>
         
         <Image src={props.game.background_image} />
         <CardBody>
