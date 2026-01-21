@@ -5,7 +5,8 @@ import apiClient from "../api-client"
 export interface Game{
     id: number,
     name: string,
-    background_image: string
+    background_image: string,
+    rating: string
 }
 interface FetchGame{
     count: number,

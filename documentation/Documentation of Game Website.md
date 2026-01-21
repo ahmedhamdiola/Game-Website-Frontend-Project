@@ -197,3 +197,72 @@ export default GameGrid
 ```
 ---
 
+# Chapter 5: Making Cards
+to make cards its very simple in Chakra Ui where in the docs there are lots of cards details .. so we will make the cards easily .. but what to display in them? we gonna make a `GameCard` component as follows: READ the comments
+```tsx
+import type { Game } from "@/hooks/useGame";
+import 
+{ Button, CardBody, CardDescription, CardFooter, CardRoot, CardTitle, Image }
+ from "@chakra-ui/react";
+
+// first we gonna make interface to specify what should be included in card
+// we need game .. so we will just add the game type here .. but previously we
+// only had id and name attributes .. now we gonna head to our Game thing and add
+// the bg .. we can see from the doc of RAWG that the image is string
+
+interface Props{
+    game: Game
+}
+
+const GameCard = (props: Props) => {
+    return (
+    <CardRoot borderRadius={20} overflow={'hidden'}>
+        <Image src={props.game.background_image} />
+        <CardBody>
+            <CardTitle>{props.game.name}</CardTitle>
+            <CardDescription>
+                {"Rating: " + props.game.rating}
+            </CardDescription>
+        </CardBody>
+        <CardFooter gap={3}>
+            <Button variant="solid">Buy now</Button>
+            <Button variant="ghost">Add to cart</Button>
+        </CardFooter>
+    </CardRoot>
+    )
+};
+
+export default GameCard;
+```
+and tiny change in the Game interface `useGame` hook so that we added the rating and background image attributes (names should be the same like in the response of the docs)
+![[Pasted image 20260121120236.png]]
+and the code of the interface would be 
+```tsx
+// don't forget to export the interface to use it in the GameCard
+export interface Game{
+    id: number,
+    name: string,
+    background_image: string,
+    rating: string
+}
+```
+so now we made the card correctly ... its time to display .. how to do so? we used `SimpleGrid` to display them .. so in the `GameGrid` component we will remove the `<ul>` tags and make as follows:
+```tsx
+const GameGrid = () => {
+  const {games, error} = useGame()
+  return (
+      <>
+      {error && <Text>{error}</Text>}
+        <SimpleGrid columns={{sm: 1, md: 2, lg: 3, xl: 5}} padding={10}                                columnGap="5" rowGap="6"> 
+            {games.map(game =>
+            <GameCard key={game.id} game = {game} />
+            )}
+        </SimpleGrid>
+      </>
+  )
+}
+//Note: gaps and padding can be customized its for the shape .. but the columns number it was done this way to improve the responsiveness of our layout
+```
+
+and finally this the final result for the mobile and the laptop views
+![[Pasted image 20260121121706.png]]![[Pasted image 20260121121728.png]]
