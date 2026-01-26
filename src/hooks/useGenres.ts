@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react"
-import apiClient from "../api-client"
+import useData from "./useData"
 
 
 export interface Genres{
@@ -7,30 +6,6 @@ export interface Genres{
     name: string,
     games_count: number,
 }
-interface FetchGenres{
-    count: number,
-    results: Genres[]
-}
+const useGenres = ()=> useData<Genres>('/genres')
 
-const useGame = ()=>{
-    const [error, setError] = useState('')
-    const [genres, setGenres] = useState<Genres[]>([])
-    const [loading, setLoading] = useState(true)
-
-
-    useEffect(()=>
-    {
-        apiClient.get<FetchGenres>('/genres') // the endpoint
-        .then(res => 
-            {setGenres(res.data.results)
-            setLoading(false)
-        })
-        .catch(err => 
-            {setError(err.message)
-            setLoading(false)
-        })
-    }, [])
-
-    return {genres, error, loading}
-}
-export default useGame
+export default useGenres
