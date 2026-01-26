@@ -13,7 +13,7 @@ const NavBar = () => {
   return (
     <HStack justifyContent={'space-between'}>
       <Image src={logo} boxSize="60px" />
-      <Text>NavBar</Text> 
+      <Text>HAMDIOLA STORE</Text> 
       <Demo/> 
     </HStack>
   )
