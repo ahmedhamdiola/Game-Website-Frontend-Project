@@ -24,7 +24,7 @@ const useData = <T> (endpoint: string)=>{
             {setError(err.message)
             setLoading(false)
         })
-    }, [])
+    }, [endpoint])
 
     return {data, error, loading}
 }
